@@ -49,7 +49,8 @@ zh_TW:
         almost_x_years:
           one: "1年"
           other: "%{count}年"
-        date_year: "D MMM 'YY"
+        date_month: "MMM D"
+        date_year: "YYYY/MM/DD"
       medium:
         x_minutes:
           one: "1 分鐘"
@@ -108,6 +109,7 @@ zh_TW:
     daily: "每天"
     weekly: "每週"
     every_two_weeks: "每兩週"
+    max: "max"
     character_count:
       one: "{{count}}個字元"
       other: "{{count}}個字元"
@@ -598,6 +600,15 @@ zh_TW:
         unstar: '將此主題從你的收藏列表中移除'
 
     topics:
+      bulk:
+        toggle: "toggle bulk selection of topics"
+        actions: "Bulk Actions"
+        change_category: "Change Category"
+        close_topics: "Close Topics"
+        selected:
+          one: "You have selected <b>1</b> topic."
+          other: "You have selected <b>{{count}}</b> topics."
+
       none:
         starred: "你尚未收藏任何主題。要收藏一個主題，點擊標題旁的星星圖標。"
         unread: "你沒有未閱主題。"
@@ -1027,7 +1038,6 @@ zh_TW:
       list: "列出分類"
       no_description: "本分類沒有描述信息。"
       change_in_category_topic: "訪問分類主題來編輯描述信息"
-      hotness: "熱度"
       already_used: '此色彩已經被另一個分類使用'
       security: "安全"
       auto_close_label: "自動關閉主題，經過："
@@ -1348,8 +1358,8 @@ zh_TW:
             change_site_setting: "更改站點設置"
             change_site_customization: "更改站點自定義"
             delete_site_customization: "刪除站點自定義"
-            ban_user: "禁止使用者"
-            unban_user: "解禁使用者"
+            suspend_user: "禁止使用者"
+            unsuspend_user: "解禁使用者"
         screened_emails:
           title: "被屏蔽的郵件地址"
           description: "當有人試圖用以下郵件地址註冊時，將受到阻止或其它系統操作。"
