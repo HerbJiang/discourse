@@ -61,6 +61,7 @@ zh_TW:
         x_days:
           one: "1 日"
           other: "%{count} 日"
+        date_year: "YYYY/MM/DD"
       medium_with_ago:
         x_minutes:
           one: "1 分鐘前"
@@ -172,6 +173,20 @@ zh_TW:
       sent_by_user: "寄件者是 <a href='{{userUrl}}'>{{user}}</a>"
       sent_by_you: "寄件者是 <a href='{{userUrl}}'>你</a>"
 
+    groups:
+      title:
+        one: "群組"
+        other: "群組"
+      members: "成員"
+      posts: "發文"
+      alias_levels:
+        title: "誰能把組名作為別名？"
+        nobody: "無"
+        only_admins: "僅管理者"
+        mods_and_admins: "僅版主與管理者"
+        members_mods_and_admins: "僅組員、版主與管理者"
+        everyone: "任何人"
+
     user_action_groups:
       "1": "送出的讚"
       "2": "收到的讚"
@@ -230,13 +245,21 @@ zh_TW:
       deleted: "（已刪除）"
       suspended_notice: "該使用者將被禁止登錄，直至{{date}}."
       suspended_reason: "原因："
-      watch_new_topics: "自動關注論壇中所有新發表的主題"
+      mailing_list_mode: "自動關注論壇中所有新發表的主題 (直到你將該主題靜音)"
       watched_categories: "已關注"
       watched_categories_instructions: "和追蹤相同，此外你還將收到新的文章和主題的通知。"
       tracked_categories: "已追蹤"
       tracked_categories_instructions: "你將自動追蹤所有新的和已有的主題，並會顯示新的和未讀文章的數量。"
       muted_categories: "免打擾"
       muted_categories_instructions: "你不會收到任何通知，也不會顯示未讀數量。"
+      delete_account: "Delete My Account"
+      delete_account_confirm: "Are you sure you want to permanently delete your account? This action cannot be undone!"
+      deleted_yourself: "Your account has been deleted successfully."
+      delete_yourself_not_allowed: "You cannot delete your account right now. Contact an admin to do delete your account for you."
+      unread_message_count:
+        one: "Messages (1)"
+        other: "Messages ({{count}})"
+        zero: "Messages"
 
       messages:
         all: "全部"
@@ -392,6 +415,10 @@ zh_TW:
     loading: "載入中……"
     close: "關閉"
     assets_changed_confirm: "Discourse已更新，是否更新以獲取最新版本？"
+    read_only_mode:
+      enabled: "An administrator has enabled read-only mode. You can continue to browse the site but interations won't work properly."
+      login_disabled: "Login is disabled while the site is in read only mode."
+
     learn_more: "了解更多……"
 
     year: '年'
@@ -463,9 +490,6 @@ zh_TW:
       facebook:
         title: "使用 Facebook"
         message: "使用 Facebook 認証 (請確定你的網頁瀏覽器未阻擋彈出視窗)"
-      cas:
-        title: "使用 CAS"
-        message: "使用 CAS 認証 (請確定你的網頁瀏覽器未阻擋彈出視窗)"
       yahoo:
         title: "使用 Yahoo"
         message: "使用 Yahoo 認証 (請確定你的網頁瀏覽器未阻擋彈出視窗)"
@@ -500,6 +524,7 @@ zh_TW:
       cancel: "取消"
       create_topic: "建立主題"
       create_pm: "建立私人訊息"
+      title: "或者按 Ctrl+Enter"
 
       users_placeholder: "添加一個使用者"
       title_placeholder: "在此輸入你的標題，簡明扼要的用一句話說明討論的內容。"
@@ -772,6 +797,11 @@ zh_TW:
       share:
         title: '分享'
         help: '分享此主題的連結'
+
+      flag_topic:
+        title: 'Flag'
+        help: 'privately flag this topic for attention or send a private notification about it'
+        success_message: 'You successfully flagged this topic.'
 
       inviting: "邀請中……"
 
@@ -1062,6 +1092,11 @@ zh_TW:
         more: "還差 {{n}} 個……"
         left: "還剩下 {{n}}"
 
+    flagging_topic:
+      title: "Why are you privately flagging this topic?"
+      action: "Flag Topic"
+      notify_action: "Notify"
+
     topic_map:
       title: "主題概要"
       links_shown: "顯示所有 {{totalLinks}} 個連結……"
@@ -1224,12 +1259,16 @@ zh_TW:
         disagree: "否絕"
         disagree_title: "否絕投訴，從此文章移除所有投訴"
         delete_spammer_title: "刪除此用戶與他的所有文章與主題"
+        clear_topic_flags: "Done"
+        clear_topic_flags_title: "The topic has been investigated and issues have been resolved. Click Done to remove the flags."
 
         flagged_by: "投訴者"
         system: "系統"
         error: "出錯了"
         view_message: "查看訊息"
         no_results: "沒有任何投訴"
+        topic_flagged: "This <strong>topic</strong> has been flagged."
+        visit_topic: "Visit the topic to investigate and take action."
 
         summary:
           action_type_3:
@@ -1249,6 +1288,8 @@ zh_TW:
             other: "濫發 x{{count}}"
 
       groups:
+        primary: "Primary Group"
+        no_primary: "(no primary group)"
         title: "群組"
         edit: "編輯群組"
         selector_placeholder: "添加使用者"
@@ -1257,13 +1298,6 @@ zh_TW:
         delete: "删除"
         delete_confirm: "删除這個小組嗎？"
         delete_failed: "不能删除這個小組, 如是自動群組, 不能被删除"
-        alias_levels:
-          title: "誰能把組名作為別名？"
-          nobody: "無"
-          only_admins: "僅管理者"
-          mods_and_admins: "僅版主與管理者"
-          members_mods_and_admins: "僅組員、版主與管理者"
-          everyone: "任何人"
 
       api:
         generate_master: "生成主API密鑰"
@@ -1279,6 +1313,53 @@ zh_TW:
         info_html: "API密鑰可以用來通過JSON調用建立和更新主題。"
         all_users: "所有使用者"
         note_html: "請<strong>安全的</strong>保管好本密鑰，任何擁有該密鑰的使用者可以使用它以論壇任何使用者的名義來發文。"
+
+      backups:
+        title: "Backups"
+        menu:
+          backups: "Backups"
+          logs: "Logs"
+        none: "No backup available."
+        read_only:
+          enable:
+            title: "Enable the read-only mode"
+            text: "Enable read-only mode"
+            confirm: "Are you sure you want to enable the read-only mode?"
+          disable:
+            title: "Disable the read-only mode"
+            text: "Disable read-only mode"
+        logs:
+          none: "No logs yet..."
+        columns:
+          filename: "Filename"
+          size: "Size"
+        operations:
+          is_running: "An operation is currently running..."
+          failed: "The {{operation}} failed. Please check the logs."
+          cancel:
+            text: "Cancel"
+            title: "Cancel the current operation"
+            confirm: "Are you sure you want to cancel the current operation?"
+          backup:
+            text: "Backup"
+            title: "Create a backup"
+            confirm: "Are you sure you want to start a new backup?"
+          download:
+            text: "Download"
+            title: "Download the backup"
+          destroy:
+            text: "Delete"
+            title: "Remove the backup"
+            confirm: "Are you sure you want to destroy this backup?"
+          restore:
+            is_disabled: "Restore is disabled in the site settings."
+            text: "Restore"
+            title: "Restore the backup"
+            confirm: "Are your sure you want to restore this backup?"
+          rollback:
+            text: "Rollback"
+            title: "Rollback the database to previous working state"
+            confirm: "Are your sure you want to rollback the database to the previous working state?"
 
       customize:
         title: "自定"
@@ -1301,8 +1382,11 @@ zh_TW:
       email:
         title: "電子郵件"
         settings: "設置"
-        logs: "日誌"
+        all: "全部"
+        sent: "已發送"
+        skipped: "略過"
         sent_at: "發送時間"
+        time: "時間"
         user: "用户"
         email_type: "郵件類型"
         to_address: "目的地址"
@@ -1318,6 +1402,16 @@ zh_TW:
         text: "文字"
         last_seen_user: "最後看見使用者:"
         reply_key: "回覆金鑰"
+        skipped_reason: "略過原因"
+        logs:
+          none: "No logs found."
+          filters:
+            title: "Filter"
+            user_placeholder: "username"
+            address_placeholder: "em@il.com"
+            type_placeholder: "digest, signup..."
+            reply_key_placeholder: ""
+            skipped_reason_placeholder: "reason"
 
       logs:
         title: "記錄"
@@ -1536,6 +1630,7 @@ zh_TW:
           rate_limits: '頻率限制'
           developer: '開發者'
           embedding: "嵌入"
+          legal: "Legal"
           uncategorized: '未分類'
 
     lightbox:
