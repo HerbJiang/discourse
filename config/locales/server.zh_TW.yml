@@ -24,8 +24,8 @@ zh_TW:
   via: "%{username} 自 %{site_name}"
   is_reserved: "保留權利"
 
-  site_under_maintenance: '網站維護中。'
-  operation_already_running: "%{operation} 操作正在運行。 目前無法執行新的 %{operation} 操作。"
+  backup:
+    operation_already_running: "%{operation} 操作正在運行。 目前無法執行新的 %{operation} 操作。"
 
   too_many_replies:
     one: "很抱歉新的使用者暫時被限制同一個主題下不得發文超過一次"
@@ -671,7 +671,7 @@ zh_TW:
 
     enable_persona_logins: "Enable email-based authentication with Mozilla Persona"
 
-    allow_import: "Allow import, which can replace ALL site data; leave false unless you plan to do data imports"
+    allow_restore: "允許導入資料，這將替換全站資料。除非你計畫導入資料，否則請保持設置為false"
 
     active_user_rate_limit_secs: "How frequently we update the 'last_seen_at' field, in seconds"
     previous_visit_timeout_hours: "How long a visit lasts before we consider it the 'previous' visit, in hours"

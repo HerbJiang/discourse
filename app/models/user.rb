@@ -35,7 +35,6 @@ class User < ActiveRecord::Base
   has_one :facebook_user_info, dependent: :destroy
   has_one :twitter_user_info, dependent: :destroy
   has_one :github_user_info, dependent: :destroy
-  has_one :cas_user_info, dependent: :destroy
   has_one :oauth2_user_info, dependent: :destroy
   has_one :user_stat, dependent: :destroy
   belongs_to :approved_by, class_name: 'User'
@@ -96,6 +95,10 @@ class User < ActiveRecord::Base
 
   def self.username_length
     3..15
+  end
+
+  def custom_groups
+    groups.where(automatic: false)
   end
 
   def self.username_available?(username)
@@ -482,7 +485,7 @@ class User < ActiveRecord::Base
 
 
   def secure_category_ids
-    cats = self.staff? ? Category.where(read_restricted: true) : secure_categories.references(:categories)
+    cats = self.admin? ? Category.where(read_restricted: true) : secure_categories.references(:categories)
     cats.pluck('categories.id').sort
   end
 
