@@ -250,16 +250,16 @@ zh_TW:
       watched_categories_instructions: "和追蹤相同，此外你還將收到新的文章和主題的通知。"
       tracked_categories: "已追蹤"
       tracked_categories_instructions: "你將自動追蹤所有新的和已有的主題，並會顯示新的和未讀文章的數量。"
-      muted_categories: "免打擾"
+      muted_categories: "靜音(勿擾)"
       muted_categories_instructions: "你不會收到任何通知，也不會顯示未讀數量。"
       delete_account: "Delete My Account"
       delete_account_confirm: "Are you sure you want to permanently delete your account? This action cannot be undone!"
       deleted_yourself: "Your account has been deleted successfully."
       delete_yourself_not_allowed: "You cannot delete your account right now. Contact an admin to do delete your account for you."
       unread_message_count:
-        one: "Messages (1)"
-        other: "Messages ({{count}})"
-        zero: "Messages"
+        one: "訊息 (1)"
+        other: "訊息 ({{count}})"
+        zero: "訊息"
 
       messages:
         all: "全部"

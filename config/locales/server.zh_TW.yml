@@ -942,8 +942,6 @@ zh_TW:
     text_body_template: |
       這是一封來自 %{site_name} 論壇的測試郵件。你可以通過瀏覽器瀏覽該論壇：
 
-
-
       [**%{base_url}**][0]
 
       電子郵件分發可能會很複雜，但是你可以快速檢查如下幾點：
@@ -1175,7 +1173,7 @@ zh_TW:
 
     posted_by: "Posted by %{username} on %{post_date}"
 
-    user_invited_to_private_message:
+    user_invited_to_private_message_pm:
       subject_template: "[%{site_name}] %{username} 邀請你私下交流：'%{topic_title}'"
       text_body_template: |
         %{username} 邀請你在 %{site_name} 就 '%{topic_title}' 進行私下交流：
@@ -1183,56 +1181,44 @@ zh_TW:
         請瀏覽 %{base_url}%{url} 來查看該主題。
 
     user_replied:
-      subject_template: "[%{site_name}] %{username} 在 '%{topic_title}' 主題回覆了你的文章"
+      subject_template: "[%{site_name}] %{topic_title}"
       text_body_template: |
-        %{username} 在 %{site_name} 的 '%{topic_title}' 主題中回覆了你的文章：
-
-        ---
         %{message}
 
         %{context}
 
         ---
-        請瀏覽 %{base_url}%{url} 來回覆。
+        %{respond_instructions}
 
     user_quoted:
-      subject_template: "[%{site_name}] %{username} 在 '%{topic_title}' 主題引用了你的內容"
+      subject_template: "[%{site_name}] %{topic_title}"
       text_body_template: |
-        %{username} 在 %{site_name} 的 '%{topic_title}' 主題中引用了你的內容：
-
-        ---
         %{message}
 
         %{context}
 
         ---
-        請瀏覽 %{base_url}%{url} 來回覆。
+        %{respond_instructions}
 
     user_mentioned:
-      subject_template: "[%{site_name}] %{username} 在 '%{topic_title}' 主題提及了你"
+      subject_template: "[%{site_name}] %{topic_title}"
       text_body_template: |
-        %{username} 在 %{site_name} 的 '%{topic_title}' 主題中提及到了你：
-
-        ---
         %{message}
 
         %{context}
 
         ---
-        請瀏覽 %{base_url}%{url} 來回覆。
+        %{respond_instructions}
 
     user_posted:
-      subject_template: "[%{site_name}] %{subject_prefix}%{username} 在 '%{topic_title}' 主題發表了文章"
+      subject_template: "[%{site_name}] %{topic_title}"
       text_body_template: |
-        %{username} 在 %{site_name} 的 '%{topic_title}' 主題中發表了文章：
-
-        ---
         %{message}
 
         %{context}
 
         ---
-        請瀏覽 %{base_url}%{url} 來回覆。
+        %{respond_instructions}
 
     user_posted_pm:
       subject_template: "[%{site_name}] [PM] %{topic_title}"
