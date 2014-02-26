@@ -4,7 +4,7 @@ require_dependency 'discourse'
 require_dependency 'custom_renderer'
 require_dependency 'archetype'
 require_dependency 'rate_limiter'
-require_dependency 'googlebot_detection'
+require_dependency 'crawler_detection'
 
 class ApplicationController < ActionController::Base
   include CurrentUser
@@ -39,8 +39,12 @@ class ApplicationController < ActionController::Base
 
   layout :set_layout
 
+  def has_escaped_fragment?
+    SiteSetting.enable_escaped_fragments? && params.key?("_escaped_fragment_")
+  end
+
   def set_layout
-    GooglebotDetection.googlebot?(request.user_agent) ? 'googlebot' : 'application'
+    has_escaped_fragment? || CrawlerDetection.crawler?(request.user_agent) ? 'crawler' : 'application'
   end
 
   rescue_from Exception do |exception|
@@ -109,7 +113,11 @@ class ApplicationController < ActionController::Base
   end
 
   def set_locale
-    I18n.locale = SiteSetting.default_locale
+    I18n.locale = if SiteSetting.allow_user_locale && current_user && current_user.locale.present?
+                    current_user.locale
+                  else
+                    SiteSetting.default_locale
+                  end
   end
 
   def store_preloaded(key, json)
@@ -207,7 +215,7 @@ class ApplicationController < ActionController::Base
   private
 
     def preload_anonymous_data
-      store_preloaded("site", Site.cached_json(guardian))
+      store_preloaded("site", Site.json_for(guardian))
       store_preloaded("siteSettings", SiteSetting.client_settings_json)
       store_preloaded("customHTML", custom_html_json)
     end

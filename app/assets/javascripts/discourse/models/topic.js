@@ -313,7 +313,7 @@ Discourse.Topic.reopenClass({
     WATCHING: 3,
     TRACKING: 2,
     REGULAR: 1,
-    MUTE: 0
+    MUTED: 0
   },
 
   createActionSummary: function(result) {
@@ -419,6 +419,13 @@ Discourse.Topic.reopenClass({
         topic_ids: topics.map(function(t) { return t.get('id'); }),
         operation: operation
       }
+    });
+  },
+
+  bulkOperationByFilter: function(filter, operation) {
+    return Discourse.ajax("/topics/bulk", {
+      type: 'PUT',
+      data: { filter: filter, operation: operation }
     });
   }
 
