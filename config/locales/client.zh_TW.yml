@@ -214,12 +214,12 @@ zh_TW:
       subcategories: "子分類："
       topic_stats: "新主題的數量。"
       topic_stat_sentence:
-        one: "過去的%{unit}中有%{count}個新主題。"
-        other: "過去的%{unit}中有%{count}個新主題。"
+        one: "過去的一整%{unit}中有%{count}個新主題。"
+        other: "過去的一整%{unit}中有%{count}個新主題。"
       post_stats: "新文章的數量。"
       post_stat_sentence:
-        one: "過去的%{unit}中有%{count}個新文章。"
-        other: "過去的%{unit}中有%{count}個新文章。"
+        one: "過去的一整%{unit}中有%{count}個新文章。"
+        other: "過去的一整%{unit}中有%{count}個新文章。"
 
     user:
       said: "{{username}} 說:"
@@ -324,6 +324,11 @@ zh_TW:
         checking: "查看使用者名稱是否可用……"
         enter_email: '找到使用者名稱，請輸入對應電子郵箱。'
         prefilled: "電子郵箱與使用者名稱匹配。"
+
+      locale:
+        title: "介面語系"
+        instructions: "論壇介面所顯示的語言，更動後刷新瀏覽器"
+        default: "(預設)"
 
       password_confirmation:
         title: "請再次輸入密碼"
@@ -623,10 +628,13 @@ zh_TW:
 
     topics:
       bulk:
+        reset_read: "Reset Read"
+        dismiss_read: "Dismiss Read"
         toggle: "toggle bulk selection of topics"
         actions: "Bulk Actions"
         change_category: "Change Category"
         close_topics: "Close Topics"
+        notification_level: "Change Notification Level"
         selected:
           one: "You have selected <b>1</b> topic."
           other: "You have selected <b>{{count}}</b> topics."
@@ -1333,6 +1341,11 @@ zh_TW:
         columns:
           filename: "Filename"
           size: "Size"
+        upload:
+          text: "UPLOAD"
+          uploading: "UPLOADING"
+          success: "'{{filename}}' has successfully been uploaded."
+          error: "There has been an error ({{message}}) while uploading '{{filename}}'"
         operations:
           is_running: "An operation is currently running..."
           failed: "The {{operation}} failed. Please check the logs."
@@ -1568,6 +1581,9 @@ zh_TW:
         delete_forbidden:
           one: "使用者已註冊 %{count} 天或已有發文後，則無法被刪除。請先刪除該使用者的所有發文後再試。"
           other: "使用者已註冊 %{count} 天或已有發文後，則無法被刪除。請先刪除該使用者的所有發文後再試。"
+        cant_delete_all_posts:
+          one: "部分文章已經超過 %{count} 天，無法全部刪除。"
+          other: "部分文章已經超過 %{count} 天，無法全部刪除。"
         delete_confirm: "你 確定 你要永久的從本站刪除此使用者？該操作無法撤銷！"
         delete_and_block: "<b>確定</b>，並<b>阻止</b>該郵件地址和IP地址再次註冊。"
         delete_dont_block: "<b>確定</b>，但<b>允許</b>該郵件地址和IP地址再次註冊。"
