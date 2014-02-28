@@ -27,6 +27,8 @@ zh_TW:
 
   backup:
     operation_already_running: "%{operation} 操作正在運行。 目前無法執行新的 %{operation} 操作。"
+    backup_file_should_be_tar_gz: "The backup file should be a .tar.gz archive."
+    not_enough_space_on_disk: "There is not enough space on disk to upload this backup."
 
   read_only_mode_enabled: "The site is in read only mode. Interactions are disabled."
 
@@ -201,6 +203,11 @@ zh_TW:
 
   meta_category_name: "Meta"
   meta_category_description: "Discussion about this forum, its organization, how it works, and how we can improve it."
+
+  staff_category_name: "Staff"
+  staff_category_description: "Private category for staff discussions. Topics are only visible to admins and moderators."
+
+  assets_topic_body: "This is a topic to store forum assets used in the forum design. Don't delete it!"
 
   category:
     topic_prefix: "對於分類: %{category} 的定義"
@@ -775,6 +782,8 @@ zh_TW:
     tos_url: "如果你想要使用一個部署在某個地方的服務條款文檔，那麼請在此填寫其完整URL地址。"
     privacy_policy_url: "如果你想要使用一個部署在某個地方的隱私政策文檔，那麼請在此填寫其完整URL地址。"
 
+    newuser_spam_host_threshold: "How many times a new user can post a link to the same host within their `newuser_spam_host_posts` posts before being considered spam."
+
     newuser_spam_host_threshold: "使用者在一篇文章中能添加多少指向同一主機的連結，取決於之前該使用者有`newuser_spam_host_threshold`篇文章被認為是垃圾帖。"
     staff_like_weight: "Extra weighting factor given to likes when performed by staff."
 
@@ -1339,7 +1348,6 @@ zh_TW:
   flag_reason:
     sockpuppet: "A new user created a topic, and another new user at the same IP address replied. See the flag_sockpuppets site setting."
     spam_hosts: "This user tried to create multiple posts with links to the same domain. See the newuser_spam_host_threshold site setting."
-
 
   email_log:
     no_user: "Can't find user with id %{user_id}"

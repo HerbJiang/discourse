@@ -679,6 +679,7 @@ zh_TW:
       invalid_access:
         title: "這是私密主題"
         description: "抱歉，你沒有訪問此主題的權限！"
+        login_required: "你必須登入才能看到此主題"
       server_error:
         title: "載入主題失敗"
         description: "抱歉，無法載入此主題。有可能是網絡連接問題導致的，請重試。如果問題始終存在，請告訴我們。"
