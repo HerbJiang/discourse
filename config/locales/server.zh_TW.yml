@@ -677,12 +677,17 @@ zh_TW:
 
     login_required: "Require authentication to read posts"
 
+    min_username_length: "Minimum username length. (Does not apply if global nickname uniqueness is forced)"
+    
     min_password_length: "Minimum password length."
     block_common_passwords: "Don't allow passwords that are in the 5000 most common passwords."
 
     enable_sso: "Enable single sign on via an external site"
     sso_url: "URL of single sign on endpoint"
     sso_secret: "Secret string used to encrypt/decrypt SSO information, be sure it is 10 chars or longer"
+    sso_overrides_email: "Overrides local email with external site email from SSO payload (WARNING: discrepancies can occur due to normalization of local emails)"
+    sso_overrides_username: "Overrides local username with external site username from SSO payload (WARNING: discrepancies can occur due to differences in username length/requirements)"
+    sso_overrides_name: "Overrides local name with external site name from SSO payload (WARNING: discrepancies can occur due to normalization of local names)"
 
     enable_local_logins: "Enable traditional, local username and password authentication"
     enable_local_account_create: "Enable creating new local accounts"
@@ -798,7 +803,10 @@ zh_TW:
     pop3s_polling_host: "The host to poll for email via POP3S"
     pop3s_polling_username: "The username for the POP3S account to poll for email"
     pop3s_polling_password: "The password for the POP3S account to poll for email"
-    enable_mailing_list_mode: "Allow users to (optionally) opt-in to mailing list mode via a user preference"
+    email_in: "Allow users to post new topics via email"
+    email_in_address: "The email address the users can post new topics to. None means users can't post globally."
+    email_in_min_trust: "The minimum trust level an users needs to have to be allowed to post new topics via email"
+    email_in_category: "The category new emails are posted into"
 
     minimum_topics_similar: "How many topics need to exist in the database before similar topics are presented."
 
@@ -1116,6 +1124,24 @@ zh_TW:
       subject_template: "導入成功"
       text_body_template: "導入操作成功。"
 
+    email_error_notification:
+      subject_template: "Error parsing email"
+      text_body_template: |
+        This is an automated message to inform you that parsing the following incoming email failed.
+
+        Please review the following message.
+
+        Error - %{error}
+
+        %{source}
+
+    email_reject_trust_level:
+      subject_template: "Message rejected"
+      text_body_template: |
+        The message you've send to %{to} was rejected by the system.
+
+        You do not have the required trust to post new topics to this email address.
+
     too_many_spam_flags:
       subject_template: "New account blocked"
       text_body_template: |
@@ -1254,7 +1280,7 @@ zh_TW:
       read_more: "查看更多"
 
       posts:
-        one: "一則發文"
+        one: "1則發文"
         other: "%{count}則發文"
 
     forgot_password:

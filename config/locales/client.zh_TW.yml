@@ -244,7 +244,6 @@ zh_TW:
       enable_quoting: "自動引用高亮選擇的文字"
       change: "更改"
       moderator: "{{user}} 是版主"
-<<<<<<< HEAD
       admin: "{{user}} 是管理者"
       deleted: "（已刪除）"
       suspended_notice: "該使用者將被禁止登錄，直至{{date}}."
@@ -333,11 +332,6 @@ zh_TW:
         title: "介面語系"
         instructions: "論壇介面所顯示的語言，更動後刷新瀏覽器"
         default: "(預設)"
-
-      locale:
-        title: "界面語言"
-        instructions: "所使用的論壇界面的語言。當你刷新頁面，它將改變。"
-        default: "(default)"
 
       password_confirmation:
         title: "請再次輸入密碼"
@@ -639,6 +633,7 @@ zh_TW:
       bulk:
         reset_read: "重設閱讀"
         dismiss_read: "取消閱讀"
+        dismiss_new: "取修新增"
         toggle: "批量切換選擇討論話題"
         actions: "批量操作"
         change_category: "改變分類"
@@ -821,11 +816,6 @@ zh_TW:
         help: '私下地標籤關注此討論話題或傳送有關它的私人關注。'
         success_message: '你成功標籤此討論話題。'
 
-      flag_topic:
-        title: 'Flag'
-        help: 'privately flag this topic for attention or send a private notification about it'
-        success_message: 'You successfully flagged this topic.'
-
       inviting: "邀請中……"
 
       invite_private:
@@ -918,7 +908,10 @@ zh_TW:
         image_upload_not_allowed_for_new_user: "抱歉, 新使用者不能上傳圖片。"
         attachment_upload_not_allowed_for_new_user: "抱歉, 新使用者不能上傳附件。"
 
-      abandon: "你確定要丟棄你的文章嗎？"
+      abandon:
+        confirm: "你確定要丟棄你的文章嗎？"
+        no_value: "不，請保留"
+        yes_value: "是的，丟棄"
 
       archetypes:
         save: '儲存選項'
@@ -1092,6 +1085,8 @@ zh_TW:
       security: "安全"
       auto_close_label: "自動關閉主題，經過："
       auto_close_units: "小時之後"
+      email_in: "Custom incoming email address:"
+      email_in_allow_strangers: "Accept emails from non-users (aka strangers)"
       edit_permissions: "編輯權限"
       add_permission: "添加權限"
       this_year: "今年"
@@ -1114,11 +1109,6 @@ zh_TW:
         at_least: "輸入至少 {{n}} 個字元"
         more: "還差 {{n}} 個……"
         left: "還剩下 {{n}}"
-
-    flagging_topic:
-      title: "Why are you privately flagging this topic?"
-      action: "Flag Topic"
-      notify_action: "Notify"
 
     flagging_topic:
       title: "Why are you privately flagging this topic?"
