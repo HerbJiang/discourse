@@ -221,8 +221,8 @@ zh_TW:
         other: "過去的一整%{unit}中有%{count}個新主題。"
       post_stats: "新文章的數量。"
       post_stat_sentence:
-        one: "過去的一整%{unit}中有%{count}個新文章。"
-        other: "過去的一整%{unit}中有%{count}個新文章。"
+        one: "%{unit}有%{count}個新文章。"
+        other: "%{unit}有%{count}個新文章。"
 
     user:
       said: "{{username}} 說:"
@@ -429,13 +429,13 @@ zh_TW:
 
     learn_more: "了解更多……"
 
-    year: '年'
+    year: '今年'
     year_desc: '365 天內建立的討論話題'
-    month: '月'
+    month: '本月'
     month_desc: '30 天內建立的討論話題'
-    week: '週'
+    week: '本週'
     week_desc: '7 天內建立的討論話題'
-    day: '天'
+    day: '今天'
 
     first_post: 主題發佈時間
     mute: 靜音
