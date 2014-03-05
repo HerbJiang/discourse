@@ -78,6 +78,15 @@ users:
     default: ''
   sso_secret:
     defalt: ''
+  sso_overrides_email:
+    client: true
+    default: false
+  sso_overrides_username:
+    client: true
+    default: false
+  sso_overrides_name:
+    client: true
+    default: false
   enable_local_logins:
     client: true
     default: true
@@ -93,6 +102,9 @@ users:
   must_approve_users:
     client: true
     default: false
+  min_username_length:
+    client: true
+    default: 3
   min_password_length:
     client: true
     default: 8
@@ -235,9 +247,14 @@ email:
   pop3s_polling_port: 995
   pop3s_polling_username: ''
   pop3s_polling_password: ''
-  enable_mailing_list_mode:
+  email_in:
     default: false
     client: true
+  email_in_address: ''
+  email_in_min_trust:
+    default: 3
+    enum: 'MinTrustToCreateTopicSetting'
+  email_in_category: -1
 
 files:
   max_image_size_kb:

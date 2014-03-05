@@ -2,6 +2,9 @@
 # This file contains content for the client portion of Discourse, sent out
 # to the Javascript app.
 #
+# To work with us on translations, see:
+# https://www.transifex.com/projects/p/discourse-pt-br/
+#
 # To validate this YAML file after you change it, please paste it into
 # http://yamllint.com/
 
@@ -82,14 +85,14 @@ zh_TW:
       email: '用電子郵件分享此連結'
 
     edit: '編輯本主題的標題和分類'
-    not_implemented: "非常抱歉，此功能暫時尚未開放！"
+    not_implemented: "抱歉，此功能暫時尚未開放！"
     no_value: "否"
     yes_value: "是"
     of_value: "/"
     generic_error: "抱歉，發生錯誤。"
     generic_error_with_reason: "發生錯誤：%{error}"
     log_in: "登入"
-    age: "時間"
+    age: "已建立"
     last_post: "最後文章"
     joined: "加入時間："
     admin_title: "管理者"
@@ -110,7 +113,7 @@ zh_TW:
     daily: "每天"
     weekly: "每週"
     every_two_weeks: "每兩週"
-    max: "max"
+    max: "最多"
     character_count:
       one: "{{count}}個字元"
       other: "{{count}}個字元"
@@ -157,12 +160,12 @@ zh_TW:
         placeholder: "在此輸入主題標題"
 
     user_action:
-      user_posted_topic: "<a href='{{userUrl}}'>{{user}}</a> 建立了 <a href='{{topicUrl}}'>此主題</a>"
-      you_posted_topic: "<a href='{{userUrl}}'>你</a> 建立了 <a href='{{topicUrl}}'>此主題</a>"
+      user_posted_topic: "<a href='{{userUrl}}'>{{user}}</a> 建立了 <a href='{{topicUrl}}'>此討論話題</a>"
+      you_posted_topic: "<a href='{{userUrl}}'>你</a> 建立了 <a href='{{topicUrl}}'>此討論話題</a>"
       user_replied_to_post: "<a href='{{userUrl}}'>{{user}}</a> 回覆了 <a href='{{postUrl}}'>{{post_number}}</a>"
       you_replied_to_post: "<a href='{{userUrl}}'>你</a> 回覆了 <a href='{{postUrl}}'>{{post_number}}</a>"
-      user_replied_to_topic: "<a href='{{userUrl}}'>{{user}}</a> 回覆了 <a href='{{topicUrl}}'>此主題</a>"
-      you_replied_to_topic: "<a href='{{userUrl}}'>你</a> 回覆了 <a href='{{topicUrl}}'>此主題</a>"
+      user_replied_to_topic: "<a href='{{userUrl}}'>{{user}}</a> 回覆了 <a href='{{topicUrl}}'>此討論話題</a>"
+      you_replied_to_topic: "<a href='{{userUrl}}'>你</a> 回覆了 <a href='{{topicUrl}}'>此討論話題</a>"
 
       user_mentioned_user: "<a href='{{user1Url}}'>{{user}}</a> 提到了 <a href='{{user2Url}}'>{{another_user}}</a>"
       user_mentioned_you: "<a href='{{user1Url}}'>{{user}}</a> 提到了 <a href='{{user2Url}}'>你</a>"
@@ -184,12 +187,12 @@ zh_TW:
         nobody: "無"
         only_admins: "僅管理者"
         mods_and_admins: "僅版主與管理者"
-        members_mods_and_admins: "僅組員、版主與管理者"
+        members_mods_and_admins: "僅群組成員、版主與管理者"
         everyone: "任何人"
 
     user_action_groups:
-      "1": "送出的讚"
-      "2": "收到的讚"
+      "1": "送出的讚好"
+      "2": "收到的讚好"
       "3": "書籤"
       "4": "主題"
       "5": "回覆"
@@ -241,6 +244,7 @@ zh_TW:
       enable_quoting: "自動引用高亮選擇的文字"
       change: "更改"
       moderator: "{{user}} 是版主"
+<<<<<<< HEAD
       admin: "{{user}} 是管理者"
       deleted: "（已刪除）"
       suspended_notice: "該使用者將被禁止登錄，直至{{date}}."
@@ -252,10 +256,10 @@ zh_TW:
       tracked_categories_instructions: "你將自動追蹤所有新的和已有的主題，並會顯示新的和未讀文章的數量。"
       muted_categories: "靜音(勿擾)"
       muted_categories_instructions: "你不會收到任何通知，也不會顯示未讀數量。"
-      delete_account: "Delete My Account"
-      delete_account_confirm: "Are you sure you want to permanently delete your account? This action cannot be undone!"
-      deleted_yourself: "Your account has been deleted successfully."
-      delete_yourself_not_allowed: "You cannot delete your account right now. Contact an admin to do delete your account for you."
+      delete_account: "刪除我的帳號"
+      delete_account_confirm: "你真的要刪除帳號嗎?此動作不能被還原!"
+      deleted_yourself: "你的帳號已成功刪除"
+      delete_yourself_not_allowed: "帳號不能刪除。請聯絡管理人。"
       unread_message_count:
         one: "訊息 (1)"
         other: "訊息 ({{count}})"
@@ -330,6 +334,11 @@ zh_TW:
         instructions: "論壇介面所顯示的語言，更動後刷新瀏覽器"
         default: "(預設)"
 
+      locale:
+        title: "界面語言"
+        instructions: "所使用的論壇界面的語言。當你刷新頁面，它將改變。"
+        default: "(default)"
+
       password_confirmation:
         title: "請再次輸入密碼"
 
@@ -358,11 +367,11 @@ zh_TW:
         not_viewed: "我還沒有瀏覽它們"
         last_here: "它們是在我最近一次訪問這裏之後發表的"
         after_n_days:
-          one: "昨天建立的主題"
-          other: "最近 {{count}} 天建立的主題"
+          one: "昨天建立的討論"
+          other: "最近 {{count}} 天建立的討論"
         after_n_weeks:
-          one: "上週建立的主題"
-          other: "最近 {{count}} 週建立的主題"
+          one: "上週建立的討論"
+          other: "最近 {{count}} 週建立的討論"
 
       auto_track_topics: "自動追蹤我開啟的主題"
       auto_track_options:
@@ -421,17 +430,17 @@ zh_TW:
     close: "關閉"
     assets_changed_confirm: "Discourse已更新，是否更新以獲取最新版本？"
     read_only_mode:
-      enabled: "An administrator has enabled read-only mode. You can continue to browse the site but interations won't work properly."
-      login_disabled: "Login is disabled while the site is in read only mode."
+      enabled: "管理人開啟了唯讀模式。你可以繼續瀏覽論壇，可是不能進行交流動作。"
+      login_disabled: "在唯讀模式下不能登入"
 
     learn_more: "了解更多……"
 
     year: '年'
-    year_desc: '365 天內建立的主題'
+    year_desc: '365 天內建立的討論話題'
     month: '月'
-    month_desc: '30 天內建立的主題'
+    month_desc: '30 天內建立的討論話題'
     week: '週'
-    week_desc: '7 天內建立的主題'
+    week_desc: '7 天內建立的討論話題'
     day: '天'
 
     first_post: 主題發佈時間
@@ -527,7 +536,7 @@ zh_TW:
       reply_here: "在此回覆"
       reply: "回覆"
       cancel: "取消"
-      create_topic: "建立主題"
+      create_topic: "建立討論話題"
       create_pm: "建立私人訊息"
       title: "或者按 Ctrl+Enter"
 
@@ -628,16 +637,16 @@ zh_TW:
 
     topics:
       bulk:
-        reset_read: "Reset Read"
-        dismiss_read: "Dismiss Read"
-        toggle: "toggle bulk selection of topics"
-        actions: "Bulk Actions"
-        change_category: "Change Category"
-        close_topics: "Close Topics"
-        notification_level: "Change Notification Level"
+        reset_read: "重設閱讀"
+        dismiss_read: "取消閱讀"
+        toggle: "批量切換選擇討論話題"
+        actions: "批量操作"
+        change_category: "改變分類"
+        close_topics: "關閉討論話題"
+        notification_level: "改變通知等級"
         selected:
-          one: "You have selected <b>1</b> topic."
-          other: "You have selected <b>{{count}}</b> topics."
+          one: "你選擇了 <b>1</b> 個討論話題."
+          other: "你選擇了 <b>{{count}}</b> 個討論話題."
 
       none:
         starred: "你尚未收藏任何主題。要收藏一個主題，點擊標題旁的星星圖標。"
@@ -797,15 +806,20 @@ zh_TW:
 
       reply:
         title: '回覆'
-        help: '開始編寫對此主題的回覆'
+        help: '開始編寫對此討論話題的回覆'
 
       clear_pin:
         title: "取消置頂"
-        help: "取消主題的置頂狀態，它將不會出現在你的主題列表的最上面。"
+        help: "取消討論話題的置頂狀態，它將不會出現在你的討論話題列表的最上面。"
 
       share:
         title: '分享'
-        help: '分享此主題的連結'
+        help: '分享此討論話題的連結'
+
+      flag_topic:
+        title: '標籤'
+        help: '私下地標籤關注此討論話題或傳送有關它的私人關注。'
+        success_message: '你成功標籤此討論話題。'
 
       flag_topic:
         title: 'Flag'
@@ -842,10 +856,10 @@ zh_TW:
         cancel: "再次顯示本主題下的所有文章。"
 
       split_topic:
-        title: "移至新主題"
-        action: "移至新主題"
-        topic_name: "新主題的名稱"
-        error: "將主題移至新主題時發生錯誤。"
+        title: "移至新討論話題"
+        action: "移至新討論話題"
+        topic_name: "新討論話題的名稱"
+        error: "將討論話題移至新討論話題時發生錯誤。"
         instructions:
           one: "你想如何移動該文？"
           other: "你想如何移動你所選擇的這{{count}}篇文章？"
@@ -1106,6 +1120,11 @@ zh_TW:
       action: "Flag Topic"
       notify_action: "Notify"
 
+    flagging_topic:
+      title: "Why are you privately flagging this topic?"
+      action: "Flag Topic"
+      notify_action: "Notify"
+
     topic_map:
       title: "主題概要"
       links_shown: "顯示所有 {{totalLinks}} 個連結……"
@@ -1148,7 +1167,7 @@ zh_TW:
         help: "最近最受歡迎的主題"
       starred:
         title: "收藏"
-        help: "你收藏的主題"
+        help: "你收藏的討論話題"
       read:
         title: "已閱"
         help: "你已經閱讀過的主題"
@@ -1324,56 +1343,56 @@ zh_TW:
         note_html: "請<strong>安全的</strong>保管好本密鑰，任何擁有該密鑰的使用者可以使用它以論壇任何使用者的名義來發文。"
 
       backups:
-        title: "Backups"
+        title: "備份"
         menu:
-          backups: "Backups"
-          logs: "Logs"
-        none: "No backup available."
+          backups: "備份"
+          logs: "紀錄"
+        none: "沒有可以使用的備份。"
         read_only:
           enable:
-            title: "Enable the read-only mode"
-            text: "Enable read-only mode"
-            confirm: "Are you sure you want to enable the read-only mode?"
+            title: "啟動唯讀模式"
+            text: "啟動唯讀模式"
+            confirm: "你確定要啟動唯讀模式?"
           disable:
-            title: "Disable the read-only mode"
-            text: "Disable read-only mode"
+            title: "關閉啟動唯讀模式"
+            text: "關閉啟動唯讀模式"
         logs:
-          none: "No logs yet..."
+          none: "沒有紀錄..."
         columns:
-          filename: "Filename"
-          size: "Size"
+          filename: "文件名稱"
+          size: "大小"
         upload:
-          text: "UPLOAD"
-          uploading: "UPLOADING"
-          success: "'{{filename}}' has successfully been uploaded."
-          error: "There has been an error ({{message}}) while uploading '{{filename}}'"
+          text: "上載"
+          uploading: "上載中"
+          success: "'{{filename}}' 已成功被上載"
+          error: "上載時發生問題： '{{filename}}': {{message}}"
         operations:
-          is_running: "An operation is currently running..."
-          failed: "The {{operation}} failed. Please check the logs."
+          is_running: "指令執行中..."
+          failed: "{{operation}} 執行失敗。請觀看紀錄。"
           cancel:
-            text: "Cancel"
-            title: "Cancel the current operation"
-            confirm: "Are you sure you want to cancel the current operation?"
+            text: "取消"
+            title: "取消現行指令"
+            confirm: "你確定要消取現行指令嗎?"
           backup:
-            text: "Backup"
-            title: "Create a backup"
-            confirm: "Are you sure you want to start a new backup?"
+            text: "備份"
+            title: "新增備份"
+            confirm: "你確定要新增備份嗎?"
           download:
-            text: "Download"
-            title: "Download the backup"
+            text: "下載"
+            title: "下載備份"
           destroy:
-            text: "Delete"
-            title: "Remove the backup"
-            confirm: "Are you sure you want to destroy this backup?"
+            text: "刪除"
+            title: "刪除備份"
+            confirm: "你確定要刪除備份嗎?"
           restore:
-            is_disabled: "Restore is disabled in the site settings."
-            text: "Restore"
-            title: "Restore the backup"
-            confirm: "Are your sure you want to restore this backup?"
+            is_disabled: "此站設定已關閉復原"
+            text: "復原"
+            title: "復原備份"
+            confirm: "你確定要復原備份嗎?"
           rollback:
-            text: "Rollback"
-            title: "Rollback the database to previous working state"
-            confirm: "Are your sure you want to rollback the database to the previous working state?"
+            text: "回溯"
+            title: "回溯資料庫到以前的工作階段"
+            confirm: "你確定要回溯資料庫到以前的工作階段?"
 
       customize:
         title: "自定"
@@ -1418,14 +1437,14 @@ zh_TW:
         reply_key: "回覆金鑰"
         skipped_reason: "略過原因"
         logs:
-          none: "No logs found."
+          none: "找不到記錄。"
           filters:
-            title: "Filter"
+            title: "過濾"
             user_placeholder: "username"
             address_placeholder: "em@il.com"
             type_placeholder: "digest, signup..."
             reply_key_placeholder: ""
-            skipped_reason_placeholder: "reason"
+            skipped_reason_placeholder: "原因"
 
       logs:
         title: "記錄"
@@ -1472,7 +1491,7 @@ zh_TW:
         screened_urls:
           title: "被屏蔽的URL"
           description: "以下是垃圾信息發佈者使用過的URL。"
-          url: "URL"
+          url: "網址"
           domain: "域名"
         screened_ips:
           title: "被屏蔽的IP"
@@ -1505,7 +1524,7 @@ zh_TW:
           pending: "待定"
           admins: '管理者'
           moderators: '版主'
-          suspended: '已禁止'
+          suspended: '已停權'
           blocked: '已封鎖'
         approved: "已審核？"
         approved_selected:
@@ -1515,7 +1534,7 @@ zh_TW:
           one: "拒絕使用者"
           other: "拒絕使用者 ({{count}})"
         titles:
-          active: '活動使用者'
+          active: '已啟用的使用者'
           new: '新使用者'
           pending: '等待審核使用者'
           newuser: '信用等級爲0的使用者（新進使用者）'
@@ -1526,7 +1545,7 @@ zh_TW:
           admins: '管理者'
           moderators: '版主'
           blocked: '已封鎖的使用者'
-          suspended: '已禁止的使用者'
+          suspended: '已停權的使用者'
         reject_successful:
           one: "1名使用者已被拒絕。"
           other: "%{count}名使用者已被拒絕。"
@@ -1613,11 +1632,11 @@ zh_TW:
           requirement_heading: "需求"
           visits: "來訪"
           days: "天"
-          topics_with_replies: "Topics with Replies"
-          topics_replied_to: "Topics Replied To"
-          quality_content: "Quality Content"
+          topics_with_replies: "討論話題與回覆"
+          topics_replied_to: "討論話題回覆"
+          quality_content: "內容品質"
           reading: "閱讀"
-          site_promotion: "Site Promotion"
+          site_promotion: "宣傳論壇"
           flagged_posts: "被檢舉的發文"
 
       site_content:
